@@ -85,3 +85,18 @@ void eliminarProcesoLista(NodoLista* &cabeza, int idEliminar) {
     cout << "Proceso ID " << idEliminar << " eliminado" << endl;
 }
 
+void imprimirListaCompleta(NodoLista* cabeza) {
+    if (cabeza == NULL) {
+        cout << "No hay procesos registrados en el sistema" << endl;
+        return;
+    }
+    cout << "===== REGISTRO GENERAL DE PROCESOS ====" << endl;
+    NodoLista* temp = cabeza;
+    while (temp != NULL) {
+        cout << "[ID: " << temp->info.id 
+             << " | Nombre: " << temp->info.nombre 
+             << " | Prioridad: " << temp->info.prioridad 
+             << " | Memoria: " << temp->info.memoriaMB << " MB]" << endl;
+        temp = temp->siguiente;
+    }
+}
