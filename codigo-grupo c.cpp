@@ -160,7 +160,6 @@ struct NodoPila {
     int idBloque;
     int idProcesoAsignado;
     int tamanoMB;
-    NodoPila* siguiendo;
     NodoPila* siguiente;
 };
 
